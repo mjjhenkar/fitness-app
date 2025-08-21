@@ -1,0 +1,14 @@
+// FILE: package.json (root)
+{
+  "name": "ai-video-editor-monorepo",
+  "private": true,
+  "workspaces": ["./server","./client"],
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "concurrently \"cd server && npm run dev\" \"cd client && npm run dev\"",
+    "start": "node server/src/server.js"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.0"
+  }
+}
